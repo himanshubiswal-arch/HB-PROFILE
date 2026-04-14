@@ -1,0 +1,774 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>Himanshu Biswal | Financial Professional</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="description" content="Accomplished Financial Professional with 30+ years of experience in risk assurance, financial management, and operational excellence. Virtual CFO, audits, and process improvement." />
+  <style>
+    :root {
+      --bg: #0b1220;
+      --bg-soft: #111827;
+      --accent: #38bdf8;
+      --accent-soft: rgba(56,189,248,0.1);
+      --text: #e5e7eb;
+      --muted: #9ca3af;
+      --border: #1f2937;
+      --card-radius: 18px;
+      --shadow-soft: 0 22px 45px rgba(0,0,0,0.65);
+    }
+
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    body {
+      font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+      background: radial-gradient(circle at top left, #1e293b 0, #020617 45%, #000 100%);
+      color: var(--text);
+      line-height: 1.6;
+      -webkit-font-smoothing: antialiased;
+    }
+
+    a {
+      color: inherit;
+      text-decoration: none;
+    }
+
+    /* Layout */
+
+    .page {
+      min-height: 100vh;
+      display: flex;
+      justify-content: center;
+      padding: 32px 16px 64px;
+    }
+
+    .shell {
+      width: 100%;
+      max-width: 1120px;
+      display: grid;
+      grid-template-columns: 320px minmax(0, 1fr);
+      gap: 28px;
+    }
+
+    @media (max-width: 900px) {
+      .shell {
+        grid-template-columns: 1fr;
+      }
+    }
+
+    /* Left column */
+
+    .left {
+      position: relative;
+      display: flex;
+      flex-direction: column;
+      gap: 20px;
+    }
+
+    .profile-card {
+      background: linear-gradient(145deg, #020617, #020617 40%, #0b1120 100%);
+      border-radius: 24px;
+      padding: 24px 22px 26px;
+      border: 1px solid rgba(148,163,184,0.28);
+      box-shadow: var(--shadow-soft);
+      position: sticky;
+      top: 16px;
+    }
+
+    .avatar-ring {
+      width: 86px;
+      height: 86px;
+      border-radius: 50%;
+      padding: 2px;
+      background: conic-gradient(from 160deg, #38bdf8, #6366f1, #ec4899, #38bdf8);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      margin-bottom: 16px;
+    }
+
+    .avatar-inner {
+      width: 100%;
+      height: 100%;
+      border-radius: 50%;
+      background: radial-gradient(circle at 30% 20%, #1f2937 0, #020617 55%, #000 100%);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color: #e5e7eb;
+      font-weight: 700;
+      font-size: 24px;
+      letter-spacing: 1px;
+    }
+
+    .name {
+      font-size: 22px;
+      font-weight: 700;
+      letter-spacing: 0.04em;
+      text-transform: uppercase;
+    }
+
+    .role {
+      margin-top: 4px;
+      font-size: 13px;
+      color: var(--muted);
+      text-transform: uppercase;
+      letter-spacing: 0.12em;
+    }
+
+    .location-line {
+      margin-top: 12px;
+      font-size: 13px;
+      color: var(--muted);
+      display: flex;
+      flex-wrap: wrap;
+      gap: 8px;
+    }
+
+    .pill {
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+      border-radius: 999px;
+      border: 1px solid rgba(148,163,184,0.4);
+      padding: 6px 10px;
+      font-size: 11px;
+      text-transform: uppercase;
+      letter-spacing: 0.08em;
+      color: #cbd5f5;
+      background: radial-gradient(circle at top left, rgba(148,163,184,0.3), rgba(15,23,42,0.95));
+      margin-top: 14px;
+    }
+
+    .pill-dot {
+      width: 6px;
+      height: 6px;
+      border-radius: 50%;
+      background: #22c55e;
+      box-shadow: 0 0 0 4px rgba(34,197,94,0.32);
+    }
+
+    .contact-block {
+      margin-top: 18px;
+      border-radius: 16px;
+      background: rgba(15,23,42,0.9);
+      border: 1px solid rgba(148,163,184,0.38);
+      padding: 12px 12px 10px;
+      display: grid;
+      gap: 8px;
+      font-size: 13px;
+    }
+
+    .contact-row {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      color: var(--muted);
+    }
+
+    .contact-label {
+      font-size: 11px;
+      text-transform: uppercase;
+      letter-spacing: 0.08em;
+      color: #6b7280;
+      min-width: 70px;
+    }
+
+    .contact-value a {
+      color: #e5e7eb;
+      text-decoration: none;
+    }
+
+    .contact-value a:hover {
+      color: var(--accent);
+    }
+
+    .cta-wrap {
+      margin-top: 18px;
+      display: flex;
+      flex-direction: column;
+      gap: 10px;
+    }
+
+    .cta-button {
+      display: inline-flex;
+      justify-content: center;
+      align-items: center;
+      gap: 8px;
+      padding: 11px 18px;
+      border-radius: 999px;
+      border: none;
+      cursor: pointer;
+      font-size: 13px;
+      font-weight: 600;
+      text-transform: uppercase;
+      letter-spacing: 0.1em;
+      color: #0b1120;
+      background: linear-gradient(135deg, #38bdf8, #22c55e);
+      box-shadow: 0 10px 28px rgba(56,189,248,0.45);
+      transition: transform 0.12s ease-out, box-shadow 0.12s ease-out, filter 0.12s;
+    }
+
+    .cta-button:hover {
+      transform: translateY(-1px) scale(1.01);
+      box-shadow: 0 18px 40px rgba(56,189,248,0.6);
+      filter: brightness(1.04);
+    }
+
+    .cta-button:active {
+      transform: translateY(0) scale(0.99);
+      box-shadow: 0 8px 18px rgba(15,23,42,0.8);
+      filter: brightness(0.98);
+    }
+
+    .cta-sub {
+      font-size: 11px;
+      color: var(--muted);
+    }
+
+    .nav-chips {
+      margin-top: 20px;
+      display: flex;
+      flex-wrap: wrap;
+      gap: 8px;
+      font-size: 11px;
+    }
+
+    .nav-chip {
+      padding: 6px 10px;
+      border-radius: 999px;
+      border: 1px solid rgba(148,163,184,0.4);
+      color: #cbd5f5;
+      text-transform: uppercase;
+      letter-spacing: 0.08em;
+      cursor: pointer;
+      background: rgba(15,23,42,0.9);
+      transition: border-color 0.12s ease-out, background 0.12s ease-out, color 0.12s;
+    }
+
+    .nav-chip:hover {
+      border-color: var(--accent);
+      background: rgba(15,23,42,0.8);
+      color: #e5e7eb;
+    }
+
+    /* Right column */
+
+    .right {
+      display: flex;
+      flex-direction: column;
+      gap: 18px;
+    }
+
+    .section {
+      background: rgba(15,23,42,0.96);
+      border-radius: var(--card-radius);
+      border: 1px solid var(--border);
+      padding: 20px 22px 22px;
+      box-shadow: 0 18px 35px rgba(0,0,0,0.45);
+      position: relative;
+      overflow: hidden;
+    }
+
+    .section::before {
+      content: "";
+      position: absolute;
+      inset: 0;
+      pointer-events: none;
+      opacity: 0.16;
+      background:
+        radial-gradient(circle at top right, rgba(56,189,248,0.25), transparent 55%),
+        radial-gradient(circle at bottom left, rgba(59,130,246,0.18), transparent 55%);
+      mix-blend-mode: screen;
+    }
+
+    .section-inner {
+      position: relative;
+      z-index: 1;
+    }
+
+    .section-header {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      margin-bottom: 10px;
+    }
+
+    .section-title {
+      font-size: 15px;
+      text-transform: uppercase;
+      letter-spacing: 0.16em;
+      color: #9ca3af;
+    }
+
+    .section-badge {
+      font-size: 11px;
+      text-transform: uppercase;
+      letter-spacing: 0.14em;
+      padding: 4px 10px;
+      border-radius: 999px;
+      border: 1px solid rgba(148,163,184,0.4);
+      color: #a5b4fc;
+      background: rgba(15,23,42,0.88);
+    }
+
+    .section-body {
+      margin-top: 4px;
+      font-size: 14px;
+      color: #d1d5db;
+    }
+
+    p {
+      margin-bottom: 10px;
+    }
+
+    ul {
+      list-style: none;
+      margin-top: 4px;
+    }
+
+    li {
+      position: relative;
+      padding-left: 16px;
+      margin-bottom: 6px;
+    }
+
+    li::before {
+      content: "•";
+      position: absolute;
+      left: 0;
+      color: var(--accent);
+      font-size: 14px;
+      top: -1px;
+    }
+
+    .tag-row {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 6px;
+      margin-top: 6px;
+    }
+
+    .tag {
+      font-size: 11px;
+      border-radius: 999px;
+      padding: 4px 9px;
+      border: 1px solid rgba(148,163,184,0.5);
+      color: #e5e7eb;
+      background: rgba(15,23,42,0.8);
+    }
+
+    .experience-item {
+      margin-top: 12px;
+      padding-top: 10px;
+      border-top: 1px dashed rgba(55,65,81,0.8);
+    }
+
+    .experience-header {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: space-between;
+      gap: 4px;
+      margin-bottom: 4px;
+    }
+
+    .exp-role {
+      font-weight: 600;
+      color: #e5e7eb;
+      font-size: 14px;
+    }
+
+    .exp-meta {
+      font-size: 12px;
+      color: var(--muted);
+      text-align: right;
+    }
+
+    .exp-subtitle {
+      font-size: 12px;
+      text-transform: uppercase;
+      letter-spacing: 0.12em;
+      color: #9ca3af;
+      margin-top: 6px;
+      margin-bottom: 4px;
+    }
+
+    .two-col {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+      gap: 8px 18px;
+    }
+
+    .mini-label {
+      font-size: 12px;
+      text-transform: uppercase;
+      letter-spacing: 0.12em;
+      color: #9ca3af;
+      margin-bottom: 2px;
+    }
+
+    .mini-text {
+      font-size: 14px;
+      color: #d1d5db;
+    }
+
+    /* Subtle scroll & hover effects */
+
+    html {
+      scroll-behavior: smooth;
+    }
+
+    .section {
+      opacity: 0;
+      transform: translateY(16px);
+      animation: fadeUp 0.7s ease-out forwards;
+    }
+
+    .section:nth-of-type(1) { animation-delay: 0.05s; }
+    .section:nth-of-type(2) { animation-delay: 0.12s; }
+    .section:nth-of-type(3) { animation-delay: 0.19s; }
+    .section:nth-of-type(4) { animation-delay: 0.26s; }
+    .section:nth-of-type(5) { animation-delay: 0.33s; }
+    .section:nth-of-type(6) { animation-delay: 0.40s; }
+
+    @keyframes fadeUp {
+      from {
+        opacity: 0;
+        transform: translateY(18px);
+      }
+      to {
+        opacity: 1;
+        transform: translateY(0);
+      }
+    }
+
+    /* Footer */
+
+    .footer {
+      margin-top: 10px;
+      font-size: 11px;
+      color: var(--muted);
+      text-align: center;
+    }
+
+    .footer span {
+      color: #e5e7eb;
+    }
+
+  </style>
+</head>
+<body>
+  <div class="page">
+    <main class="shell">
+      <!-- Left column: identity + contact + navigation -->
+      <aside class="left">
+        <section class="profile-card">
+          <div class="avatar-ring">
+            <div class="avatar-inner">
+              HB
+            </div>
+          </div>
+
+          <div class="name">HIMANSHU BISWAL</div>
+          <div class="role">Financial Professional | Virtual CFO & Risk Assurance</div>
+
+          <div class="location-line">
+            <span>Ghaziabad, UP</span>
+            <span>•</span>
+            <span>India</span>
+          </div>
+
+          <div class="pill">
+            <span class="pill-dot"></span>
+            <span>Open to Interviews</span>
+          </div>
+
+          <div class="contact-block">
+            <div class="contact-row">
+              <div class="contact-label">Phone</div>
+              <div class="contact-value">
+                <a href="tel:9313068617">9313068617</a>
+              </div>
+            </div>
+            <div class="contact-row">
+              <div class="contact-label">Email</div>
+              <div class="contact-value">
+                <a href="mailto:h_biswal@yahoo.com?subject=Interview%20Opportunity%20for%20Financial%20Leadership%20Role">
+                  h_biswal@yahoo.com
+                </a>
+              </div>
+            </div>
+            <div class="contact-row">
+              <div class="contact-label">Location</div>
+              <div class="contact-value">Ghaziabad, Uttar Pradesh</div>
+            </div>
+          </div>
+
+          <div class="cta-wrap">
+            <!-- You can change this Calendly link once you have it -->
+            <button class="cta-button" onclick="scheduleInterview()">
+              Schedule Interview
+            </button>
+            <div class="cta-sub">
+              Click to schedule a meeting directly in my calendar or send me an email with your preferred slot.
+            </div>
+          </div>
+
+          <div class="nav-chips">
+            <button class="nav-chip" onclick="scrollToSection('summary')">Summary</button>
+            <button class="nav-chip" onclick="scrollToSection('competencies')">Core Skills</button>
+            <button class="nav-chip" onclick="scrollToSection('experience')">Experience</button>
+            <button class="nav-chip" onclick="scrollToSection('education')">Education</button>
+            <button class="nav-chip" onclick="scrollToSection('development')">Certifications</button>
+            <button class="nav-chip" onclick="scrollToSection('skills')">Technical</button>
+            <button class="nav-chip" onclick="scrollToSection('personal')">Personal</button>
+          </div>
+        </section>
+      </aside>
+
+      <!-- Right column: main resume content -->
+      <section class="right">
+        <!-- Professional Summary -->
+        <section id="summary" class="section">
+          <div class="section-inner">
+            <div class="section-header">
+              <div class="section-title">Professional Summary</div>
+              <div class="section-badge">30+ Years Experience</div>
+            </div>
+            <div class="section-body">
+              <p>
+                Accomplished Financial Professional with 30+ years of extensive experience in risk 
+                assurance, financial management, and operational excellence. Expert in virtual CFO 
+                services, internal audits, and process improvement. Proven track record of implementing 
+                cost-saving initiatives, streamlining operations, and delivering strategic financial guidance 
+                across diverse industries.
+              </p>
+              <div class="tag-row">
+                <div class="tag">Risk Assurance</div>
+                <div class="tag">Virtual CFO</div>
+                <div class="tag">Process Improvement</div>
+                <div class="tag">Operational Excellence</div>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <!-- Core Competencies -->
+        <section id="competencies" class="section">
+          <div class="section-inner">
+            <div class="section-header">
+              <div class="section-title">Core Competencies</div>
+              <div class="section-badge">Key Strengths</div>
+            </div>
+            <div class="section-body">
+              <ul>
+                <li>Risk Assessment & Management</li>
+                <li>Virtual CFO Services</li>
+                <li>Internal & Forensic Audits</li>
+                <li>Process Improvement</li>
+                <li>Financial Reporting</li>
+                <li>SOP Development</li>
+                <li>Advanced Excel & Power BI</li>
+                <li>Loan Syndication</li>
+                <li>Compliance Management</li>
+                <li>Client Relationship Management</li>
+                <li>Created AI agent for Hiring and Competitor Ads Analysis</li>
+              </ul>
+            </div>
+          </div>
+        </section>
+
+        <!-- Professional Experience -->
+        <section id="experience" class="section">
+          <div class="section-inner">
+            <div class="section-header">
+              <div class="section-title">Professional Experience</div>
+              <div class="section-badge">Leadership & Delivery</div>
+            </div>
+            <div class="section-body">
+              <!-- Freelance Financial Professional -->
+              <article class="experience-item">
+                <div class="experience-header">
+                  <div class="exp-role">Freelance Financial Professional</div>
+                  <div class="exp-meta">April 2023 - Present</div>
+                </div>
+                <div class="exp-subtitle">Key Responsibilities</div>
+                <ul>
+                  <li>Manage financial records using ZOHO accounting software for 5+ clients</li>
+                  <li>Conduct comprehensive bank statement reconciliations</li>
+                  <li>Generate detailed financial reports with 98% accuracy</li>
+                  <li>Assist MSMEs in securing over ₹50 lakhs in unsecured loans from Axis and HDFC Banks</li>
+                  <li>Provide audit support ensuring 100% compliance with financial regulations</li>
+                </ul>
+              </article>
+
+              <!-- Director, Risk Assurance Services -->
+              <article class="experience-item">
+                <div class="experience-header">
+                  <div class="exp-role">Director, Risk Assurance Services</div>
+                  <div class="exp-meta">
+                    Easy Lane Management Pvt Ltd<br />
+                    April 2022 - March 2023
+                  </div>
+                </div>
+                <div class="exp-subtitle">Achievements</div>
+                <ul>
+                  <li>Delivered virtual CFO services to 10+ clients, optimizing financial operations</li>
+                  <li>Conducted comprehensive internal audits identifying and mitigating potential risks</li>
+                  <li>Managed PAN India physical verifications for inventory and fixed assets</li>
+                  <li>Implemented monitoring controls resulting in 25% improved operational efficiency</li>
+                  <li>Trained 50+ clients on advanced Excel and Power BI techniques</li>
+                </ul>
+              </article>
+
+              <!-- Vice President, Operations -->
+              <article class="experience-item">
+                <div class="experience-header">
+                  <div class="exp-role">Vice President, Operations</div>
+                  <div class="exp-meta">
+                    Outbooks Outsourcing Pvt Ltd<br />
+                    September 2018 - March 2022
+                  </div>
+                </div>
+                <div class="exp-subtitle">Key Contributions</div>
+                <ul>
+                  <li>Developed 10+ management information systems (MIS) for weekly executive reporting</li>
+                  <li>Managed workforce of 250+ employees, overseeing daily operations and team performance</li>
+                  <li>Reduced operational costs by 15% through strategic workforce optimization</li>
+                  <li>Coordinated ISO 9001 and 27001 certification processes</li>
+                  <li>Handled end-to-end employee lifecycle, including onboarding and performance appraisals</li>
+                </ul>
+              </article>
+
+              <!-- Senior Manager, Audit -->
+              <article class="experience-item">
+                <div class="experience-header">
+                  <div class="exp-role">Senior Manager, Audit</div>
+                  <div class="exp-meta">
+                    GSA &amp; Associates LLP<br />
+                    1995 - 2018
+                  </div>
+                </div>
+                <div class="exp-subtitle">Professional Highlights</div>
+                <ul>
+                  <li>Conducted 100+ internal, statutory, forensic, and due diligence audits</li>
+                  <li>Served diverse sectors: manufacturing, banking, infrastructure, NBFC, power, insurance</li>
+                  <li>Managed client relationships for 50+ high-profile accounts</li>
+                  <li>Ensured 100% compliance with statutory requirements</li>
+                  <li>Performed tax audits and TDS management</li>
+                </ul>
+              </article>
+            </div>
+          </div>
+        </section>
+
+        <!-- Education -->
+        <section id="education" class="section">
+          <div class="section-inner">
+            <div class="section-header">
+              <div class="section-title">Education</div>
+              <div class="section-badge">Academic Background</div>
+            </div>
+            <div class="section-body">
+              <div class="two-col">
+                <div>
+                  <div class="mini-label">Bachelor of Commerce (Honours)</div>
+                  <div class="mini-text">Utkal University | 1988-1989</div>
+                </div>
+                <div>
+                  <div class="mini-label">Senior Secondary Education</div>
+                  <div class="mini-text">Orissa State Education Board</div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <!-- Professional Development -->
+        <section id="development" class="section">
+          <div class="section-inner">
+            <div class="section-header">
+              <div class="section-title">Professional Development</div>
+              <div class="section-badge">Continuous Learning</div>
+            </div>
+            <div class="section-body">
+              <ul>
+                <li>Pursuing Certification in Chat GPT and AI Tools</li>
+                <li>Ongoing Certification in Financial Modeling</li>
+              </ul>
+            </div>
+          </div>
+        </section>
+
+        <!-- Technical Skills & Personal Info -->
+        <section id="skills" class="section">
+          <div class="section-inner">
+            <div class="section-header">
+              <div class="section-title">Technical Skills</div>
+              <div class="section-badge">Tools & Platforms</div>
+            </div>
+            <div class="section-body">
+              <ul>
+                <li>Accounting Software: ZOHO, Tally</li>
+                <li>Data Analysis: Microsoft Power BI, Tableau</li>
+                <li>Advanced Excel Techniques</li>
+                <li>CRM Systems</li>
+                <li>ISO Certification Processes</li>
+              </ul>
+            </div>
+          </div>
+        </section>
+
+        <section id="personal" class="section">
+          <div class="section-inner">
+            <div class="section-header">
+              <div class="section-title">Personal Information</div>
+              <div class="section-badge">Additional Details</div>
+            </div>
+            <div class="section-body">
+              <div class="two-col">
+                <div>
+                  <div class="mini-label">Date of Birth</div>
+                  <div class="mini-text">21st June 1968</div>
+                </div>
+                <div>
+                  <div class="mini-label">Languages</div>
+                  <div class="mini-text">English, Hindi, Oriya</div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <div class="footer">
+          <span>Himanshu Biswal</span> • Financial Professional • Virtual CFO, Risk Assurance &amp; Audit Leadership
+        </div>
+      </section>
+    </main>
+  </div>
+
+  <script>
+    function scrollToSection(id) {
+      const el = document.getElementById(id);
+      if (el) {
+        el.scrollIntoView({ behavior: 'smooth', block: 'start' });
+      }
+    }
+
+    function scheduleInterview() {
+      // Replace with your actual Calendly / scheduling URL when ready.
+      const calendlyLink = ""; // e.g. "https://calendly.com/yourname/30min"
+
+      if (calendlyLink) {
+        window.open(calendlyLink, "_blank");
+      } else {
+        window.location.href = "mailto:h_biswal@yahoo.com?subject=Interview%20Opportunity%20for%20Financial%20Leadership%20Role&body=Dear%20Mr.%20Biswal,%0D%0A%0D%0AWe%20would%20like%20to%20schedule%20an%20interview%20to%20discuss%20a%20potential%20opportunity.%20Please%20share%20your%20availability%20for%20a%2030-45%20minute%20discussion.%0D%0A%0D%0ARegards,%0D%0A";
+      }
+    }
+  </script>
+</body>
+</html>
